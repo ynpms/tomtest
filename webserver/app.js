@@ -47,8 +47,8 @@ app.get(['/blog/8-experiments-in-motivation', '/blog1'], function (req, res, nex
 
 
 // Start up server on port 3000 on host localhost
-var server = app.listen(3000, function () {
-  var port = server.address().port;
+var server = app.listen(process.env.PORT||3000, function () {
+var port = server.address().port;
 
   console.log('Assignment 3 server on localhost listening on port ' + port + '!');
   console.log('Open up your browser (within your VM) and enter the URL "http://localhost:' + port + '" to view your website!');
