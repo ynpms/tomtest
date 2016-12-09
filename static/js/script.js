@@ -40,7 +40,7 @@ function cafeFilter() {
 
 
 document.addEventListener("load", getRatings('moffitt'));
-/*document.addEventListener("load", getRatings('doe'));
+document.addEventListener("load", getRatings('doe'));
 document.addEventListener("load", getRatings('wurster'));
 document.addEventListener("load", getRatings('bechtel'));
 document.addEventListener("load", getRatings('mainstacks'));
@@ -55,10 +55,10 @@ document.addEventListener("load", getRatings('yali'));
 document.addEventListener("load", getRatings('northside'));
 document.addEventListener("load", getRatings('peet'));
 document.addEventListener("load", getRatings('starbucks'));
-*/
+
 
 function getRatings(getname){
- var getrequest =  'http://localhost:3001/rates?name='+getname;
+ var getrequest =  'https://quiet-fortress-31280.herokuapp.com/rates?name='+getname;
 
     var reqRget = new XMLHttpRequest();
 
@@ -85,7 +85,7 @@ function reviewing(num, name){
 
     
     //var getrequest = 'http://localhost:3001/rates?name='+name; //THIS SHOULD BE USED AS A QUERY FOR A POST REQUEST AS WELL, THEN LET THE API DO THE SAME FOR POST AS FOR GET + ADD ROW!
-    var postrequest = 'http://localhost:3001/rates';
+    var postrequest = 'https://quiet-fortress-31280.herokuapp.com/rates';
 
     console.log(postrequest);
     //var reqRget = new XMLHttpRequest();
