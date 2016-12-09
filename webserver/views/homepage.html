@@ -1,0 +1,261 @@
+<html>
+
+  <head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+	<div id="library-container">
+		<div id="description" style="text-align:center">
+			<strong>Rate a Study Spot</strong>
+		</div>
+		<div class="dropdown">
+		<button onclick="libraryFunction()" id="library-btn" class="dropbtn">Libraries</button>
+  			<div id="library-dropdown" class="dropdown-content">
+    			<input type="text" placeholder="choose" id="library-input" onkeyup="libraryFilter()">
+			    <a href="#moffitt">Moffitt
+					<span class="starRating">
+					  <input id="moffitt5" type="radio" name="rating" value="5" onclick="reviewing(5,'moffitt')">
+					  <label for="moffitt5">5</label>
+					  <input id="moffitt4" type="radio" name="rating" value="4" onclick="reviewing(4, 'moffitt')">
+					  <label for="moffitt4">4</label>
+					  <input id="moffitt3" type="radio" name="rating" value="3" onclick="reviewing(3, 'moffitt')">
+					  <label for="moffitt3">3</label>
+					  <input id="moffitt2" type="radio" name="rating" value="2" onclick="reviewing(2, 'moffitt')">
+					  <label for="moffitt2">2</label>
+					  <input id="moffitt1" type="radio" name="rating" value="1" onclick="reviewing(1, 'moffitt')">
+					  <label for="moffitt1">1</label>
+					</span></a>
+			    <a href="#doe">Doe
+			    	<span class="starRating">
+					  <input id="doe5" type="radio" name="rating1" value="5" onclick="reviewing(5,'doe')">
+					  <label for="doe5">5</label>
+					  <input id="doe4" type="radio" name="rating1" value="4" onclick="reviewing(4,'doe')">
+					  <label for="doe4">4</label>
+					  <input id="doe3" type="radio" name="rating1" value="3" onclick="reviewing(3,'doe')">
+					  <label for="doe3">3</label>
+					  <input id="doe2" type="radio" name="rating1" value="2" onclick="reviewing(2,'doe')">
+					  <label for="doe2">2</label>
+					  <input id="doe1" type="radio" name="rating1" value="1" onclick="reviewing(1,'doe')">
+					  <label for="doe1">1</label>
+					</span></a>
+			    <a href="#wurster">Wurster
+			    	<span class="starRating">
+					  <input id="wurst5" type="radio" name="ratingw" value="5" onclick="reviewing(5, 'wurster')">
+					  <label for="wurst5">5</label>
+					  <input id="wurst4" type="radio" name="ratingw" value="4" onclick="reviewing(4, 'wurster')">
+					  <label for="wurst4">4</label>
+					  <input id="wurst3" type="radio" name="ratingw" value="3" onclick="reviewing(3, 'wurster')">
+					  <label for="wurst3">3</label>
+					  <input id="wurst2" type="radio" name="ratingw" value="2" onclick="reviewing(2, 'wurster')">
+					  <label for="wurst2">2</label>
+					  <input id="wurst1" type="radio" name="ratingw" value="1" onclick="reviewing(1, 'wurster')">
+					  <label for="wurst1">1</label>
+					</span></a>
+			    <a href="#bechtel">Bechtel
+			    	<span class="starRating">
+					  <input id="bech5" type="radio" name="ratingb" value="5" onclick="reviewing(5, 'bechtel')">
+					  <label for="bech5">5</label>
+					  <input id="bech4" type="radio" name="ratingb" value="4" onclick="reviewing(4, 'bechtel')">
+					  <label for="bech4">4</label>
+					  <input id="bech3" type="radio" name="ratingb" value="3" onclick="reviewing(3, 'bechtel')">
+					  <label for="bech3">3</label>
+					  <input id="bech2" type="radio" name="ratingb" value="2" onclick="reviewing(2, 'bechtel')">
+					  <label for="bech2">2</label>
+					  <input id="bech1" type="radio" name="ratingb" value="1" onclick="reviewing(1, 'bechtel')">
+					  <label for="bech1">1</label>
+					</span></a>
+			    <a href="#mainstacks">Mainstacks
+			    	<span class="starRating">
+					  <input id="main5" type="radio" name="ratingm" value="5" onclick="reviewing(5, 'mainstacks')">
+					  <label for="main5">5</label>
+					  <input id="main4" type="radio" name="ratingm" value="4" onclick="reviewing(4, 'mainstacks')">
+					  <label for="main4">4</label>
+					  <input id="main3" type="radio" name="ratingm" value="3" onclick="reviewing(3, 'mainstacks')">
+					  <label for="main3">3</label>
+					  <input id="main2" type="radio" name="ratingm" value="2" onclick="reviewing(2, 'mainstacks')">
+					  <label for="main2">2</label>
+					  <input id="main2" type="radio" name="ratingm" value="1" onclick="reviewing(1, 'mainstacks')">
+					  <label for="main2">1</label>
+					</span></a>
+			    <a href="#etcheverry">Etcheverry
+			    	<span class="starRating">
+					  <input id="et5" type="radio" name="ratinget" value="5" onclick="reviewing(5, 'etcheverry')">
+					  <label for="et5">5</label>
+					  <input id="et4" type="radio" name="ratinget" value="4" onclick="reviewing(4, 'etcheverry')">
+					  <label for="et4">4</label>
+					  <input id="et3" type="radio" name="ratinget" value="3" onclick="reviewing(3, 'etcheverry')">
+					  <label for="et3">3</label>
+					  <input id="et2" type="radio" name="ratinget" value="2" onclick="reviewing(2, 'etcheverry')">
+					  <label for="et2">2</label>
+					  <input id="et1" type="radio" name="ratinget" value="1" onclick="reviewing(1, 'etcheverry')">
+					  <label for="et1">1</label>
+					</span></a>
+			    <a href="#soda">Soda
+			    <span class="starRating">
+					  <input id="soda5" type="radio" name="ratingso" value="5" onclick="reviewing(5, 'soda')">
+					  <label for="soda5">5</label>
+					  <input id="soda4" type="radio" name="ratingso" value="4" onclick="reviewing(4, 'soda')">
+					  <label for="soda4">4</label>
+					  <input id="soda3" type="radio" name="ratingso" value="3" onclick="reviewing(3, 'soda')">
+					  <label for="soda3">3</label>
+					  <input id="soda2" type="radio" name="ratingso" value="2" onclick="reviewing(2, 'soda')">
+					  <label for="soda2">2</label>
+					  <input id="soda1" type="radio" name="ratingso" value="1" onclick="reviewing(1, 'soda')">
+					  <label for="soda1">1</label>
+					</span></a>
+  			</div>
+  			<br>
+  			<hr>
+  			</div>
+  			
+  			<div class="dropdownB">
+  		<button onclick="cafeFunction()" id="cafe-btn" class="dropbtnB">Cafes</button>
+  			<div id="cafe-dropdown" class="dropdownB-contentB">
+    			<input type="text" placeholder="choose" id="cafe-input" onkeyup="cafeFilter()">+
+			    <a href="#milano">Milano
+			    	<span class="starRating">
+					  <input id="milano5" type="radio" name="ratingmil" value="5" onclick="reviewing(5, 'milano')">
+					  <label for="milano5">5</label>
+					  <input id="milano4" type="radio" name="ratingmil" value="4" onclick="reviewing(4, 'milano')">
+					  <label for="milano4">4</label>
+					  <input id="milano3" type="radio" name="ratingmil" value="3" onclick="reviewing(3, 'milano')">
+					  <label for="milano3">3</label>
+					  <input id="milano2" type="radio" name="ratingmil" value="2" onclick="reviewing(2, 'milano')">
+					  <label for="milano2">2</label>
+					  <input id="milano2" type="radio" name="ratingmil" value="1" onclick="reviewing(1, 'milano')">
+					  <label for="milano2">1</label>
+					</span></a>
+			    <a href="#strada">Strada
+			    	<span class="starRating">
+					  <input id="strada5" type="radio" name="ratingstr" value="5" onclick="reviewing(5, 'strada')">
+					  <label for="strada5">5</label>
+					  <input id="strada4" type="radio" name="ratingstr" value="4" onclick="reviewing(4, 'strada')">
+					  <label for="strada4">4</label>
+					  <input id="strada3" type="radio" name="ratingstr" value="3" onclick="reviewing(3, 'strada')">
+					  <label for="strada3">3</label>
+					  <input id="strada2" type="radio" name="ratingstr" value="2" onclick="reviewing(2, 'strada')">
+					  <label for="strada2">2</label>
+					  <input id="strada1" type="radio" name="ratingstr" value="1" onclick="reviewing(1, 'strada')">
+					  <label for="strada1">1</label>
+					</span></a>
+			    <a href="#fsm">FSM
+			    	<span class="starRating">
+					  <input id="fsm5" type="radio" name="ratingfs" value="5" onclick="reviewing(5, 'fsm')">
+					  <label for="fsm5">5</label>
+					  <input id="fsm4" type="radio" name="ratingfs" value="4" onclick="reviewing(4, 'fsm')">
+					  <label for="fsm4">4</label>
+					  <input id="fsm3" type="radio" name="ratingfs" value="3" onclick="reviewing(3, 'fsm')">
+					  <label for="fsm3">3</label>
+					  <input id="fsm2" type="radio" name="ratingfs" value="2" onclick="reviewing(2, 'fsm')">
+					  <label for="fsm2">2</label>
+					  <input id="fsm1" type="radio" name="ratingfs" value="1" onclick="reviewing(1, 'fsm')">
+					  <label for="fsm1">1</label>
+					</span></a>
+			    <a href="#yalis">Yali's
+			    	<span class="starRating">
+					  <input id="yal5" type="radio" name="ratingya" value="5" onclick="reviewing(5, 'yali')">
+					  <label for="yal5">5</label>
+					  <input id="yal4" type="radio" name="ratingya" value="4" onclick="reviewing(4, 'yali')">
+					  <label for="yal4">4</label>
+					  <input id="yal3" type="radio" name="ratingya" value="3" onclick="reviewing(3, 'yali')">
+					  <label for="yal3">3</label>
+					  <input id="yal3" type="radio" name="ratingya" value="2" onclick="reviewing(2, 'yali')">
+					  <label for="yal2">2</label>
+					  <input id="yal1" type="radio" name="ratingya" value="1" onclick="reviewing(1, 'yali')">
+					  <label for="yal1">1</label>
+					</span></a>
+			    <a href="#northside">Northside
+			    	<span class="starRating">
+					  <input id="north5" type="radio" name="ratingnor" value="5" onclick="reviewing(5, 'northside')">
+					  <label for="north5">5</label>
+					  <input id="north4" type="radio" name="ratingnor" value="4" onclick="reviewing(4, 'northside')">
+					  <label for="north4">4</label>
+					  <input id="north3" type="radio" name="ratingnor" value="3" onclick="reviewing(3, 'northside')">
+					  <label for="north3">3</label>
+					  <input id="north2" type="radio" name="ratingnor" value="2" onclick="reviewing(2, 'northside')">
+					  <label for="north2">2</label>
+					  <input id="north1" type="radio" name="ratingnor" value="1" onclick="reviewing(1, 'northside')">
+					  <label for="north1">1</label>
+					</span></a>
+			    <a href="#peets">Peet's
+			    	<span class="starRating">
+					  <input id="peet5" type="radio" name="ratingpeet" value="5" onclick="reviewing(5, 'peet')">
+					  <label for="peet5">5</label>
+					  <input id="peet4" type="radio" name="ratingpeet" value="4" onclick="reviewing(4, 'peet')">
+					  <label for="peet4">4</label>
+					  <input id="peet3" type="radio" name="ratingpeet" value="3" onclick="reviewing(3, 'peet')">
+					  <label for="peet3">3</label>
+					  <input id="peet2" type="radio" name="ratingpeet" value="2" onclick="reviewing(2, 'peet')">
+					  <label for="peet2">2</label>
+					  <input id="peet1" type="radio" name="ratingpeet" value="1" onclick="reviewing(1, 'peet')">
+					  <label for="peet1">1</label>
+					</span></a>
+			    <a href="#starbucks">Starbucks
+			    	<span class="starRating">
+					  <input id="star5" type="radio" name="ratingstar" value="5" onclick="reviewing(5, 'starbucks')">
+					  <label for="star5">5</label>
+					  <input id="star4" type="radio" name="ratingstar" value="4" onclick="reviewing(4, 'starbucks')">
+					  <label for="star4">4</label>
+					  <input id="star3" type="radio" name="ratingstar" value="3" onclick="reviewing(3, 'starbucks')">
+					  <label for="star3">3</label>
+					  <input id="star2" type="radio" name="ratingstar" value="2" onclick="reviewing(2, 'starbucks')">
+					  <label for="star2">2</label>
+					  <input id="star1" type="radio" name="ratingstar" value="1" onclick="reviewing(1, 'starbucks')">
+					  <label for="star1">1</label>
+					</span></a>
+  			</div>
+  			<br>
+  			<hr>
+		</div>
+		<div id="credit">
+			<p>Created by LegenDev</p><br>
+		</div>
+	</div>
+
+	<div id="map">
+	    <script>
+	      var map;
+	      function initMap() {
+	        var map = new google.maps.Map(document.getElementById('map'), {
+	          center: {lat: 37.8719, lng: -122.2585},
+	          zoom: 16
+	        });
+
+	        var moff = {lat: 37.8725, lng: -122.2609};
+		        var marker1 = new google.maps.Marker({
+	            position: moff,
+	            map: map,
+	            title: 'moffittmarker'
+            });
+
+		    var doe = {lat: 37.8722, lng: -122.2596};
+		        var marker2 = new google.maps.Marker({
+	            position: doe,
+	            map: map,
+	            title: 'doemarker'
+            });
+             
+            var wurster = {lat: 37.8705, lng: -122.25488};
+            	var marker3 = new google.maps.Marker({
+	            position: wurster,
+	            map: map,
+	            title: 'wurstermarker'
+            });
+
+	      }
+	    </script>
+	    <script async defer
+	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3ETovNqZ5K4OsEjD4P7cN_DhXvxkL-UE&callback=initMap"></script>
+	 </div>
+
+   	<script src="/static/js/script.js"></script>
+  </body>
+
+
+</html>
+
+  
+

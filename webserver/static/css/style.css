@@ -1,0 +1,236 @@
+#library-container {
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 325px;
+	background-color: rgb(0,50,98);
+    position: absolute;
+    padding: 0;
+}
+
+#description {
+	top: 0;
+	font-family: "Times New Roman", Times, serif;
+	color: white;
+	font-weight: bold;
+	font-size: 30px;
+    font-variant: small-caps;
+}
+
+#map {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+    left:300px;
+    z-index: 1;
+    position: relative;
+    top:0;
+}
+
+li {
+	background-color: blue;
+	opacity: 0.5;
+	color: white;
+	border-width: 5px;
+	border-color: grey;
+	padding-top: 10px;
+}
+
+a:link {
+	color: white;
+}
+
+.dropbtn {
+    background-color: #FDB515;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    vertical-align: middle;
+    padding-bottom: 20px;
+    width:175px;
+    font-variant: small-caps;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: gray;
+}
+
+.dropbtnB {
+    background-color: #FDB515;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    vertical-align: middle;
+    padding-bottom: 20px;
+    width:175px;
+    font-variant: small-caps;
+}
+
+.dropbtnB:hover, .dropbtnB:focus {
+    background-color: grey;
+}
+
+#myInput {
+    border-box: box-sizing;
+    background-image: url('searchicon.png');
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    
+}
+
+.dropdownB {
+    position: relative;
+    display: inline-block;
+    
+}
+
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 270px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index:5000;
+}
+
+
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdownB-contentB {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 270px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index:5000
+}
+
+
+
+.dropdownB-contentB a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+/*Make the dropdown hoverable*/
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdownB:hover .dropdownB-contentB {
+    display: block;
+}
+/*Until here is the dropdown hoverable*/
+
+.dropdown a:hover {background-color: #ddd}
+
+.dropdownB a:hover {background-color: #ddd}
+
+hr {
+  border: 0;
+  border-top: 1px solid #8c8c8c;
+  border-bottom: 1px solid #fff;
+}
+
+
+.show {display:block;}
+
+body{
+  margin      : 0;
+  padding     : 1.5em;
+  font-family : sans-serif;
+  line-height : 1.5;
+}
+
+a{
+  color           : blue;
+  text-decoration : underline;
+    text-underline: 2px;
+    margin: 0;
+    padding:0;
+
+}
+
+.starRating:not(old){
+  display        : inline-block;
+  width          : 7.5em;
+  height         : 1.5em;
+  overflow       : hidden;
+  vertical-align : bottom;
+}
+
+.starRating:not(old) > input{
+  margin-right : -100%;
+  opacity      : 0;
+}
+
+.starRating:not(old) > label{
+  display         : block;
+  float           : right;
+  position        : relative;
+  background      : url('star-off.svg');
+  background-size : contain;
+}
+
+.starRating:not(old) > label:before{
+  content         : '';
+  display         : block;
+  width           : 1.5em;
+  height          : 1.5em;
+  background      : url('star-on.svg');
+  background-size : contain;
+  opacity         : 0;
+  transition      : opacity 0.2s linear;
+}
+
+.starRating:not(old) > label:hover:before,
+.starRating:not(old) > label:hover ~ label:before,
+.starRating:not(:hover) > :checked ~ label:before{
+  opacity : 1;
+}
+#credit{
+    left:0;
+    top:317px;
+    background-color: black;
+    font-color:white;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+    width: 325px;
+    position: relative;
+    margin:0;
+    padding:0;
+    text-align: center;
+}
+p{
+    margin: 0px;
+    padding: 0;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+    color:white;
+}
+
