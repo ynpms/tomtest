@@ -40,7 +40,7 @@ function cafeFilter() {
 
 
 document.addEventListener("load", getRatings('moffitt'));
-document.addEventListener("load", getRatings('doe'));
+/*document.addEventListener("load", getRatings('doe'));
 document.addEventListener("load", getRatings('wurster'));
 document.addEventListener("load", getRatings('bechtel'));
 document.addEventListener("load", getRatings('mainstacks'));
@@ -55,7 +55,7 @@ document.addEventListener("load", getRatings('yali'));
 document.addEventListener("load", getRatings('northside'));
 document.addEventListener("load", getRatings('peet'));
 document.addEventListener("load", getRatings('starbucks'));
-
+*/
 
 function getRatings(getname){
  var getrequest =  'http://localhost:3001/rates?name='+getname;
